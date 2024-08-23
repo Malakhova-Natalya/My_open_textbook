@@ -2,6 +2,7 @@
 
 Попробуем на примере двух маленьких таблиц посчитать, сколько (и каких) строк получится при каждом из видов джойнов.
 
+### Создание таблиц
 Для этого мы создадим две маленькие таблицы t1 и t2. В каждой таблице - по одной колонке. В t1 - колонка a, в t2 - колонка b.
 
 
@@ -47,64 +48,73 @@
 | 7 |      | NULL |
 | NULL |      | NULL |
 
+### INNER JOIN
+
+    SELECT t1.a, t2.b
+    FROM t1
+    INNER JOIN t2 ON t1.a=t2.b
 
 
-select t1.a, t2.b
-from t1
-inner join t2 on t1.a=t2.b
+    a		b
+    1		1
+    1		1
+    2		2
+    2		2
+    5		5
 
-a		b
-1		1
-1		1
-2		2
-2		2
-5		5
+### LEFT JOIN
 
-select t1.a, t2.b
-from t1
-left join t2 on t1.a=t2.b
+    SELECT t1.a, t2.b
+    FROM t1
+    LEFT JOIN t2 ON t1.a=t2.b
 
-a		b
-1		1
-1		1
-2		2
-2		2
-3		NULL
-4		NULL
-5		5
-6		NULL
-7		NULL
-NULL	null
 
-select t1.a, t2.b
-from t1
-right join t2 on t1.a=t2.b
+    a		b
+    1		1
+    1		1
+    2		2
+    2		2
+    3		NULL
+    4		NULL
+    5		5
+    6		NULL
+    7		NULL
+    NULL	NULL
 
-a		b
-1		1
-1		1
-2		2
-2		2
-5		5
-NULL	9
-NULL	NULL
-NULL	NULL
 
-select t1.a, t2.b
-from t1
-full join t2 on t1.a=t2.b
+### RIGHT JOIN
 
-a		b
-1		1
-1		1
-2		2
-2		2
-3		NULL
-4		NULL
-5		5
-6		NULL
-7		NULL
-NULL	NULL
+    SELECT t1.a, t2.b
+    FROM t1
+    RIGHT JOIN t2 ON t1.a=t2.b
+
+    a		b
+    1		1
+    1		1
+    2		2
+    2		2
+    5		5
+    NULL	9
+    NULL	NULL
+    NULL	NULL
+
+### FULL OUTER JOIN
+
+    SELECT t1.a, t2.b
+    FROM t1
+    FULL JOIN t2 ON t1.a=t2.b
+
+    a		b
+    1		1
+    1		1
+    2		2
+    2		2
+    3		NULL
+    4		NULL
+    5		5
+    6		NULL
+    7		NULL
+    NULL	NULL
 NULL	9
 NULL	NULL
 NULL	NULL
