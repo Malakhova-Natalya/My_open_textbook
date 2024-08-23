@@ -48,18 +48,18 @@
     7
     NULL
 
-select *
-from t2
-
-b
-1
-1
-2
-2
-5
-9
-NULL
-NULL
+    SELECT *
+    FROM t2
+    
+    b
+    1
+    1
+    2
+    2
+    5
+    9
+    NULL
+    NULL
 
 select t1.a, t2.b
 from t1
