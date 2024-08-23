@@ -5,13 +5,13 @@
 Для этого мы создадим две маленькие таблицы t1 и t2.
 
 
-  CREATE TABLE t1 (
-  a INTEGER
-  );
-  
-  CREATE TABLE t2 (
-  b INTEGER
-  );
+    CREATE TABLE t1 (
+    a INTEGER
+    );
+    
+    CREATE TABLE t2 (
+    b INTEGER
+    );
 
 INSERT INTO t1(a) VALUES(1);
 INSERT INTO t1(a) VALUES(2);
