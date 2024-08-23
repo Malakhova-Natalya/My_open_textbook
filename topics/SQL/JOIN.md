@@ -33,7 +33,7 @@
     INSERT INTO t2(b) VALUES(NULL);
     INSERT INTO t2(b) VALUES(NULL);
 
-Посмотрим, как они выглядят: 
+Посмотрим, как они выглядят, для наглядности поставим их рядом: 
 
     
 | a |  | b |
@@ -48,19 +48,6 @@
 | NULL |      | NULL |
 
 
-
-    SELECT *
-    FROM t2
-    
-    b
-    1
-    1
-    2
-    2
-    5
-    9
-    NULL
-    NULL
 
 select t1.a, t2.b
 from t1
