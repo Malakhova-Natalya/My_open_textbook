@@ -33,20 +33,20 @@
     INSERT INTO t2(b) VALUES(NULL);
     INSERT INTO t2(b) VALUES(NULL);
 
+Посмотрим, как они выглядят: 
 
-
-select *
-from t1
-
-a
-1
-2
-3
-4
-5
-6
-7
-NULL
+    SELECT *
+    FROM t1
+    
+    a
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    NULL
 
 select *
 from t2
