@@ -31,3 +31,7 @@
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 2);
+
+**Задача:**
+
+Найти количество двоек для тех учеников, у которых 10 и больше пятёрок.
