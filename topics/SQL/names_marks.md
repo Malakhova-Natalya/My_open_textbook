@@ -41,21 +41,21 @@
 1. На мой взгляд, сложную (или а-ля сложную) задачу лучше изначально разбить на части: озвучить логику шагов и затем уже написать код по шагам. Плюс можно сразу оформить код читабельно, с комментариями к шагам.
 
 
-    первый шаг: берём учеников, считаем количество пятёрок для каждого и оставляем тех, у кого набралось 10 и больше пятёрок
-    WITH names_with_many_5_marks AS (  
-    SELECT name, COUNT(mark) AS cnt_5
-    FROM names_marks
-    WHERE mark=5
-    GROUP BY 1
-    HAVING COUNT(mark) >=10
-    )
-    
-    второй шаг: берём имена тех учеников, которых отобрали на предыдущем шаге, и считаем количество их двоек
-    SELECT name, COUNT(mark) as cnt_2
-    FROM names_marks 
-    WHERE name IN (SELECT name FROM names_with_many_5_marks) AND mark=2
-    GROUP BY 1
-    ORDER BY 1
+      первый шаг: берём учеников, считаем количество пятёрок для каждого и оставляем тех, у кого набралось 10 и больше пятёрок
+      WITH names_with_many_5_marks AS (  
+      SELECT name, COUNT(mark) AS cnt_5
+      FROM names_marks
+      WHERE mark=5
+      GROUP BY 1
+      HAVING COUNT(mark) >=10
+      )
+      
+      второй шаг: берём имена тех учеников, которых отобрали на предыдущем шаге, и считаем количество их двоек
+      SELECT name, COUNT(mark) as cnt_2
+      FROM names_marks 
+      WHERE name IN (SELECT name FROM names_with_many_5_marks) AND mark=2
+      GROUP BY 1
+      ORDER BY 1
 
 
 2. Но, возможно, спрашивают именно в формате без доп.шагов/подзапросов. Тогда можно использовать FILTER в блоке SELECT
