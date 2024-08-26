@@ -67,4 +67,5 @@
         GROUP BY 1
         HAVING (COUNT(Mark) FILTER(where mark=5))>=10              -- здесь реализуем подзапрос: отбираем тех, у кого 10 и больше пятёрок
         ORDER BY 1
-    
+
+Похожий пример (с FILTER): [здесь](https://github.com/Malakhova-Natalya/Snippets/tree/main/clickhouse/clickhouse_last_value)
