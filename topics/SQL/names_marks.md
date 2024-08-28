@@ -69,3 +69,11 @@
         ORDER BY 1
 
 Похожий пример (с FILTER): [здесь](https://github.com/Malakhova-Natalya/Snippets/tree/main/clickhouse/clickhouse_last_value)
+
+3. Есть вариант решения через CASE внутри агрегатной функции:
+
+      SELECT name, COUNT(CASE WHEN mark=2 THEN mark END) AS cnt_2
+      FROM names_marks
+      GROUP BY 1
+      HAVING COUNT(CASE WHEN mark=5 THEN mark END)>=10
+      ORDER BY 1
