@@ -32,3 +32,7 @@
 5. SELECT: получение всех нужных столбцов и выражений.
 6. ORDER BY: сортировка полученных значений.
 7. LIMIT: ограничение количества строк.
+
+## JOIN
+
+Есть отдельный разбор здесь: [Виды JOIN. Пример в PostgreSQL](https://github.com/Malakhova-Natalya/My_open_textbook/blob/main/topics/SQL/JOIN.md)
