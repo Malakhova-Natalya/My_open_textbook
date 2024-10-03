@@ -13,24 +13,42 @@
   
     INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5); 
     INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 4);
     INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 3);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 3);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 4);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 2);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
-    INSERT INTO names_marks(Name, Mark) VALUES('Иванов И.И.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 5);
     INSERT INTO names_marks(Name, Mark) VALUES('Петров П.П.', 2);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Александров А.А.', 4);
+    INSERT INTO names_marks(Name, Mark) VALUES('Смирнова Е.Е.', 5);
+    INSERT INTO names_marks(Name, Mark) VALUES('Смирнова Е.Е.', 2);
 
 **Задача:**
 
