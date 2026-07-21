@@ -6,4 +6,5 @@
 - виды COUNT с примерами (count(*), count(1) и т.д.): [COUNT](https://github.com/Malakhova-Natalya/My_open_textbook/blob/main/topics/SQL/COUNT.md)
 - оконная функция с order by и без: [WINDOW](https://github.com/Malakhova-Natalya/My_open_textbook/blob/main/topics/SQL/WINDOW.md)
 - задача про имена и оценки (нужно знать FILTER или CASE внутри других функций): [names_marks](https://github.com/Malakhova-Natalya/My_open_textbook/blob/main/topics/SQL/names_marks.md)
+- задача про выявление начала и конца периода: [period](https://github.com/Malakhova-Natalya/My_open_textbook/blob/main/topics/SQL/period.md)
 
