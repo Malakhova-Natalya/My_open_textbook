@@ -4,9 +4,12 @@
 Нужно по каждому клиенту получить периоды действия каждого сегмента.
 
 Главное:
-- делаем флаг начала нового периода (как 1 и 0)
-- делаем условный id периода (суммируем с накоплением 1 из предыдущего шага)
-- вычисляем старт и конец периода как min и max даты, группируя данные по id клиента, сегмента (то, что было в данных) и id периода (то, что вычислили на предыдущем шаге)
+- ***делаем флаг начала нового периода (как 1 и 0)***
+- ***делаем условный id периода (суммируем с накоплением 1 из предыдущего шага)***
+- вычисляем старт и конец периода как ***min и max*** даты, ***группируя данные*** по:
+    -  id клиента (то, что было в данных)
+    -  id сегмента (то, что было в данных)
+    -  id периода (то, что вывели сами)
 
 Создаём таблицу:
   
@@ -245,3 +248,53 @@
 | A1 |	1	 | 2025-03-31	 | 2025-04-30 |
 | A1 |	2	 | 2025-05-31	 | 2025-05-31 |
 | B2 |	1	 | 2025-06-30	 | 2025-06-30 |
+
+## Вариант с днями (не)подряд
+
+    with segment as (
+    	select '2025-01-01' as dt, 'A1' as client_id, 2 as segment_id
+        union all
+        select '2025-01-02', 'A1', 2
+        union all
+        select '2025-01-03', 'A1', 1
+        union all
+        select '2025-01-05', 'A1', 1
+        union all
+        select '2025-01-06', 'A1', 2
+        union all
+        select '2025-06-30', 'B2', 1
+    ),
+    prev_data as (
+        select
+        	toDate(dt) as dt,
+            client_id,
+            segment_id,
+            lagInFrame(dt) over (partition by client_id order by dt) as prev_date,
+            lagInFrame(segment_id) over (partition by client_id order by dt) as prev_segment_id,
+            dt - prev_date as dt_interval
+        from segment
+    ),
+    period_start_flag as (
+        select
+            *,
+            -- Начало нового периода, если:
+            -- 1) это первая строка клиента, или
+            -- 2) сегмент изменился
+            -- 3) или даты не подряд
+            or(
+            	prev_date is null,
+             	segment_id != prev_segment_id,
+             	dt_interval != 1
+            ) as new_period_flag
+        from prev_data
+    ),
+    period_table as (
+        select
+            *,
+            sum(new_period_flag) over (partition by client_id order by dt
+            ) as period_id
+        from period_start_flag 
+    ) 
+    select *
+    from period_table
+    order by 1,2
